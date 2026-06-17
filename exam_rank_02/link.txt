@@ -1,1 +1,2 @@
 https://github.com/alexhiguera/Exam_Rank_02_42_School
+https://github.com/YounesMoukhlij/Exam-Rank-02_42/tree/main/Level%202/ft_strspn
