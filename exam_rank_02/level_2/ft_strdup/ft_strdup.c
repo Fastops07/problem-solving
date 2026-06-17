@@ -12,9 +12,9 @@ char    *ft_strdup(char *src)
 {
     if(!src)
         return (NULL);
-    int lenght = ft_str_len(src);
+    int length = ft_str_len(src);
     int i = 0;
-    char *res = malloc((lenght + 1) * sizeof(*res));
+    char *res = malloc((length + 1) * sizeof(*res));
     if(!res)
         return (NULL);
     while(src[i])
