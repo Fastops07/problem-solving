@@ -1,5 +1,5 @@
 #include <unistd.h>
-void put_char(char c)
+void ft_put_char(char c)
 {
     write (1,&c,1);
 }
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 {
     if(argc != 3)
     {
-        put_char('\n');
+        ft_put_char('\n');
         return (0);
        
     }
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
     char *accept = argv[2];
     if(!str || !accept)
     {
-        put_char('\n');
+        ft_put_char('\n');
         return (0);
     }
 
@@ -47,8 +47,8 @@ int main(int argc, char **argv)
     while (str[i])
     {
         if(contains(str[i],accept) && !(n_contains(str[i], str,i)))
-            put_char(str[i]);
+            ft_put_char(str[i]);
         i++;
     }
-    put_char('\n');
+    ft_put_char('\n');
 }
