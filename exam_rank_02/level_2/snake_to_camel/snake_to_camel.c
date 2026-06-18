@@ -17,7 +17,7 @@ int is_min(char c)
 {
     return (c >= 'a' && c <= 'z');
 }
-int print_to_new_format(char *str)
+int print_to_camel(char *str)
 {
     if(str[0] && str[1] && 
         str[0] == '_' && is_min(str[1]))
@@ -52,7 +52,7 @@ int main(int argc, char ** argv)
             put_nl();
             return 0;
         }
-        print_return = print_to_new_format(str + i);
+        print_return = print_to_camel(str + i);
         if(print_return == -1)
         {
             put_nl();
