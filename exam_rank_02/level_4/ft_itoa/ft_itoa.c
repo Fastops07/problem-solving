@@ -20,8 +20,6 @@ char	*ft_itoa(int nbr)
         is_neg = 1;
         nb = -nb;
     }
-    else
-        nb = nb;
     int res_size = int_size(nb) + is_neg;
     char *res = malloc((res_size + 1) * sizeof(*res));
     if(!res)
