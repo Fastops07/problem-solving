@@ -1,0 +1,20 @@
+py_anagram
+
+Assignment name: py_anagram
+Expected files: py_anagram.py
+Allowed functions: None
+
+Write a function that checks if two strings are anagrams
+
+They must contain exactly the same letters with the same quantity, ignoring case and spaces
+
+Your function must be declared as follows:
+
+def anagram(s1: str, s2: str) -> bool:
+Examples
+anagram("listen", "silent")          -> True
+anagram("Triangle", "Integral")      -> True
+anagram("Dormitory", "Dirty Room")   -> True
+anagram("hello", "world")            -> False
+anagram("", "")                      -> True
+anagram("abc", "abcc")               -> False
