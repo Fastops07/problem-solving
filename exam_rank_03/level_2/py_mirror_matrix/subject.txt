@@ -1,0 +1,26 @@
+py_mirror_matrix
+
+Assignment name: py_mirror_matrix
+Expected files: py_mirror_matrix.py
+Allowed functions: None
+
+Given a 2D matrix (list of lists), return a new matrix where each row is reversed
+
+Your function must be declared as follows:
+
+def mirror_matrix(matrix: list[list[int]]) -> list[list[int]]:
+Examples
+mirror_matrix([[1,2,3],[4,5,6]])
+    -> [[3,2,1],[6,5,4]]
+
+mirror_matrix([[1,2],[3,4],[5,6]])
+    -> [[2,1],[4,3],[6,5]]
+
+mirror_matrix([[7]])
+    -> [[7]]
+
+mirror_matrix([[1,2,3,4]])
+    -> [[4,3,2,1]]
+
+mirror_matrix([[-1,-2],[-3,-4]])
+    -> [[-2,-1],[-4,-3]]

@@ -1,0 +1,19 @@
+py_inter
+
+Assignment name: py_inter
+Expected files: py_inter.py
+Allowed functions: None
+
+Write a function that returns the characters present in both strings without repetitions
+
+Characters must appear in the same order as in the first string
+
+Your function must be declared as follows:
+
+def inter(s1: str, s2: str) -> str:
+Examples
+inter("hello", "world")  -> "lo"
+inter("banana", "band")  -> "ban"
+inter("abcabc", "bc")    -> "bc"
+inter("abc", "xyz")      -> ""
+inter("", "abc")         -> ""

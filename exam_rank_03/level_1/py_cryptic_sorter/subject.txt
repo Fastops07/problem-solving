@@ -1,0 +1,42 @@
+py_cryptic_sorter
+
+Assignment name: py_cryptic_sorter
+Expected files: py_cryptic_sorter.py
+!!!
+Forbidden built-ins / modules: 
+sorted(), list.sort(). Use only permitted built-in functions to avoid getting 0 on exam day.
+!!!!!!!
+
+Write a function that sorts a list of strings according to multiple criteria:
+
+Primary sort: by string length, shortest first
+Secondary sort: ASCII order, except letters are compared case-insensitively for strings of the same length
+Tertiary sort: by number of vowels, ascending, for strings of the same length and lexically equal
+Equal strings appear in the same order as in the input list
+
+Your function must be declared as follows:
+
+def cryptic_sorter(strings: list[str]) -> list[str]:
+
+The function should return the sorted list
+
+Your function must handle:
+
+Empty strings and empty lists
+Mixed case strings, treated as lowercase for sorting
+Special characters, ignored for vowel counting
+Examples
+cryptic_sorter(["apple", "cat", "banana", "dog", "elephant"])
+    -> ["cat", "dog", "apple", "banana", "elephant"]
+
+cryptic_sorter(["aaa", "bbb", "AAA", "BBB"])
+    -> ["aaa", "AAA", "bbb", "BBB"]
+
+cryptic_sorter(["hello", "world", "hi", "test"])
+    -> ["hi", "test", "hello", "world"]
+
+cryptic_sorter([])
+    -> []
+
+cryptic_sorter([""])
+    -> [""]

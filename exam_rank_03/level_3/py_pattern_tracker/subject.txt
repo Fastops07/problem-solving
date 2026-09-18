@@ -1,0 +1,23 @@
+py_pattern_tracker
+
+Assignment name: py_pattern_tracker
+Expected files: py_pattern_tracker.py
+Allowed functions: None
+
+Write a function that counts valid consecutive digit pairs in a string
+
+A pair is valid when two adjacent characters are digits and the second digit is exactly one greater than the first
+
+9 followed by 0 is not considered a valid pair
+
+Your function must be declared as follows:
+
+def pattern_tracker(text: str) -> int:
+Examples
+pattern_tracker("123")       -> 2
+pattern_tracker("12a34")     -> 2
+pattern_tracker("987654321") -> 0
+pattern_tracker("01234567")  -> 7
+pattern_tracker("abc")       -> 0
+pattern_tracker("1a2b3c4")   -> 0
+pattern_tracker("112233")    -> 2
