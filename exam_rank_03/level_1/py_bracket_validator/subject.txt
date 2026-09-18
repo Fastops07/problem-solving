@@ -1,0 +1,25 @@
+Level 1
+py_bracket_validator
+
+Assignment name: py_bracket_validator
+Expected files: py_bracket_validator.py
+Allowed functions: None
+
+Write a function that checks if the brackets in a string are valid
+
+A string is valid if every opening bracket has a matching closing bracket in the correct order
+
+Allowed brackets: (), [], {}
+
+Your function must be declared as follows:
+
+def bracket_validator(s: str) -> bool:
+Examples
+bracket_validator("()")           -> True
+bracket_validator("()[]{}")       -> True
+bracket_validator("(]")           -> False
+bracket_validator("([)]")         -> False
+bracket_validator("{[]}")         -> True
+bracket_validator("hello(world)") -> True
+bracket_validator("((())")        -> False
+bracket_validator("")             -> True
