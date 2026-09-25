@@ -16,11 +16,11 @@ def compare_len(value: str, lowest: str) -> DIFF:
 
 
 def compare_ascii(value: str, lowest: str) -> DIFF:
-    for char_value, char_lowest in zip(value.casefold(),lowest.casefold()):
+    for char_value, char_lowest in zip(value.lower(), lowest.lower()):
 
         if ord(char_value) < ord(char_lowest):
             return DIFF.LOWER
-        if ord(char_value) > ord(char_lowest): 
+        if ord(char_value) > ord(char_lowest):
             return DIFF.GREATER
 
     return DIFF.EQUAL
