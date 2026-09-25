@@ -33,7 +33,6 @@
 
 # # def look_for_pairs(bracket_list: list[str]) -> list[str]:
 # #     curr: str = bracket_list[0]
-# #     next: str = bracket_list[1]
 # #     print("Entry :", curr, next)
 
 # #     if next == opposite(curr):
