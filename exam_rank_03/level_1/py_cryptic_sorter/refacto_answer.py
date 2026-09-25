@@ -2,9 +2,9 @@ from enum import Enum
 
 
 class DIFF(Enum):
-    LOWER = 1
-    EQUAL = 2
-    GREATER = 3
+    LOWER = -1
+    EQUAL = 0
+    GREATER = 1
 
 
 def compare_len(value: str, lowest: str) -> DIFF:
@@ -16,27 +16,14 @@ def compare_len(value: str, lowest: str) -> DIFF:
 
 
 def compare_ascii(value: str, lowest: str) -> DIFF:
-    for index, _ in enumerate(value):
-        ascii_value = ord(value[index].casefold())
-        ascii_lowest = ord(lowest[index].casefold())
+    for char_value, char_lowest in zip(value.casefold(),lowest.casefold()):
 
-        if ascii_value < ascii_lowest:
+        if ord(char_value) < ord(char_lowest):
             return DIFF.LOWER
-        if ascii_value > ascii_lowest:
+        if ord(char_value) > ord(char_lowest): 
             return DIFF.GREATER
 
     return DIFF.EQUAL
-
-def compare_vowels(value:str, lowest:str) -> DIFF :
-# TODO mais je penses que voyelle c est du troll, si deja meme longueur et meme ascii c est meme voyelle non ? 
-    def count_vowels(word:str)-> int:
-        count :int = 0
-        for char in word :
-            if char in "aeiouy":
-                count += 1
-        return count
-    vowels_value = count_vowels(value)
-    vowels_lowest = count_vowels(lowest)
 
 
 def get_lowest_by_index(strings: list[str]) -> int:
@@ -56,8 +43,6 @@ def get_lowest_by_index(strings: list[str]) -> int:
             if ascii_state == DIFF.LOWER:
                 lowest_index = index
                 lowest_value = value
-            elif ascii_state == DIFF.EQUAL:
-                print("hasard de dingue !!!")
     return lowest_index
 
 
@@ -67,10 +52,8 @@ def cryptic_sorter(strings: list[str]) -> list[str]:
         lowest: int = get_lowest_by_index(strings)
         ordered_list.append(strings.pop(lowest))
 
-    print("order", ordered_list)
-    print("old", strings)
-    return []
+    return ordered_list
 
 
 if __name__ == "__main__":
-    cryptic_sorter(["aa", "aa", "ac"])
+    print(cryptic_sorter(["    "]))
