@@ -1,0 +1,1 @@
+Je dirais split avec slice et puis faire un plus 
