@@ -31,3 +31,9 @@ string_sculptor("Python3.9!")
 
 string_sculptor("")
     -> ""
+
+string_sculptor("hello")
+string_sculptor("Hello World")
+string_sculptor("abc123def")
+string_sculptor("Python3.9!")
+string_sculptor("")
