@@ -2,8 +2,10 @@
 
 
 def twist_sequence(arr: list[int], k: int) -> list[int]:
+    if k < 0 :
+        return []
     arr_len = len(arr)
-    if arr_len < 2:
+    if arr_len < 2 or k == 0:
         return arr
 
     if k > arr_len:
