@@ -3,6 +3,7 @@ def echo_validator(text: str) -> bool:
 	if not text :
 		return False
 	rtxt = text[::-1]
+    
 	return text == rtxt	
 
 if __name__ == "__main__":
